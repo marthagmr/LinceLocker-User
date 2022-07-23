@@ -1,0 +1,8 @@
+body {
+    background-color: #eee;
+}
+
+ul li .white{color: #ffffff;}
+.inpSearch{ border: 5px solid #eee; border-radius: 3px; }
+.icon-lg{font-size: 19px;}
+.red {color: red;}

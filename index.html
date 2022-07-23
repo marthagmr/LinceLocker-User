@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head> 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="refresh" content="30">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>LocKey</title>
+</head>
+
+<body>
+    <ul class="nav justify-content-end bg-dark">
+        <li class="nav-item">
+            <h2 class="nav-link active white">Bienvenido a LocKey</h2>
+        </li>
+    </ul>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-left">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTask">
+                        Solicitar Locker
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <hr>
+            </div>
+        </div>
+
+                <div class="form-group">
+                    <table class="table table-sm table-bordered text-center">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID usuario</th>
+                                <th>Especialidad</th>
+                                <th>Fecha y hora</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="loadTable"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="text-left">
+                            </div>
+                            <div class="text-right">
+                                <button type="button" class="btn btn-warning" onclick="onClickUpdate()" id="update"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalTask" tabindex="-1" role="dialog" aria-labelledby="modalTask" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTask">Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" id="ID" class="form-control" placeholder = "ID">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Especialidad" class="form-control" id="carr"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success" onclick="onClickInsert()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="firebase.js"></script>
+    <script src="logic.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
